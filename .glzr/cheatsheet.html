@@ -1,0 +1,250 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-bvzihdzo> <head><!-- Global Metadata --><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/svg+xml" href="/favicon.ico"><link rel="sitemap" href="/sitemap-index.xml"><link rel="alternate" type="application/rss+xml" title="Nulldocs" href="https://nulldocs.com/rss.xml"><meta name="generator" content="Astro v5.6.1"><!-- Font preloads --><link rel="preload" href="/fonts/atkinson-regular.woff" as="font" type="font/woff" crossorigin><link rel="preload" href="/fonts/atkinson-bold.woff" as="font" type="font/woff" crossorigin><!-- Canonical URL --><link rel="canonical" href="https://nulldocs.com/windows/glazewm-cheatsheet/"><!-- Primary Meta Tags --><title>A Cheatsheet for Glaze Window Manager</title><meta name="title" content="A Cheatsheet for Glaze Window Manager"><meta name="description" content="This cheatsheet provides a concise yet comprehensive reference for using the Glaze Window Manager—from essential keybindings and layout commands to customization tips and configuration examples. Whether you're new to Glaze or just need a quick refresher, this guide is designed to help you navigate and streamline your tiling window management experience with confidence and ease."><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://nulldocs.com/windows/glazewm-cheatsheet/"><meta property="og:title" content="A Cheatsheet for Glaze Window Manager"><meta property="og:description" content="This cheatsheet provides a concise yet comprehensive reference for using the Glaze Window Manager—from essential keybindings and layout commands to customization tips and configuration examples. Whether you're new to Glaze or just need a quick refresher, this guide is designed to help you navigate and streamline your tiling window management experience with confidence and ease."><meta property="og:image" content="https://nulldocs.com/windows/glazewm-cheatsheet/[object%20Object]"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://nulldocs.com/windows/glazewm-cheatsheet/"><meta property="twitter:title" content="A Cheatsheet for Glaze Window Manager"><meta property="twitter:description" content="This cheatsheet provides a concise yet comprehensive reference for using the Glaze Window Manager—from essential keybindings and layout commands to customization tips and configuration examples. Whether you're new to Glaze or just need a quick refresher, this guide is designed to help you navigate and streamline your tiling window management experience with confidence and ease."><meta property="twitter:image" content="https://nulldocs.com/windows/glazewm-cheatsheet/[object%20Object]"><!-- View Transitions Api --><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.CMTcOisY.js"></script><link rel="stylesheet" href="/_astro/_slug_.VYGKuG5s.css">
+<style>main[data-astro-cid-bvzihdzo]{width:calc(100% - 2em);max-width:100%;margin:0}.hero-image[data-astro-cid-bvzihdzo]{width:100%}.hero-image[data-astro-cid-bvzihdzo] img[data-astro-cid-bvzihdzo]{display:block;margin:0 auto;border-radius:12px;box-shadow:var(--box-shadow)}.prose[data-astro-cid-bvzihdzo]{width:960px;max-width:calc(100% - 2em);margin:auto;padding:1em;color:rgb(var(--gray-dark))}.title[data-astro-cid-bvzihdzo]{margin-bottom:1em;text-align:center;line-height:1;color:var(--accent)}.title[data-astro-cid-bvzihdzo] h1[data-astro-cid-bvzihdzo]{margin:0 0 .5em}.date[data-astro-cid-bvzihdzo]{margin-bottom:.5em;color:rgb(var(--gray))}.last-updated-on[data-astro-cid-bvzihdzo]{font-style:italic}.tags[data-astro-cid-bvzihdzo]{display:flex;justify-content:center;gap:1rem;color:var(--secondary-text)}.tags[data-astro-cid-bvzihdzo] p[data-astro-cid-bvzihdzo]{margin:0;padding:0}@media (max-width: 720px){h1[data-astro-cid-bvzihdzo]{font-size:2.441em}h2[data-astro-cid-bvzihdzo]{font-size:1.953em}h3[data-astro-cid-bvzihdzo]{font-size:1.563em}h4[data-astro-cid-bvzihdzo]{font-size:1.25em}}@media (max-width: 450px){h1[data-astro-cid-bvzihdzo]{font-size:1.563em}h2[data-astro-cid-bvzihdzo]{font-size:1.25em}h3[data-astro-cid-bvzihdzo]{font-size:1em}h4[data-astro-cid-bvzihdzo]{font-size:.8em}}
+</style></head> <body data-astro-cid-bvzihdzo> <header data-astro-cid-3ef6ksr2> <nav data-astro-cid-3ef6ksr2> <h2 class="container" data-astro-cid-3ef6ksr2><a href="/" data-astro-cid-3ef6ksr2>Nulldocs</a></h2> <div class="links" data-astro-cid-3ef6ksr2> <a href="/" data-astro-cid-3ef6ksr2="true" data-astro-cid-eimmu3lg> Home </a>  <a href="/about" data-astro-cid-3ef6ksr2="true" data-astro-cid-eimmu3lg> About </a>  </div> <div class="external-links links container" data-astro-cid-3ef6ksr2> <a href="https://github.com/miyarima" target="_blank" data-astro-cid-3ef6ksr2> <span class="sr-only" data-astro-cid-3ef6ksr2>Go to Miyarima's GitHub repo</span> <svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32" data-astro-cid-3ef6ksr2><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" data-astro-cid-3ef6ksr2></path></svg> </a> </div> </nav> </header>  <main data-astro-cid-bvzihdzo> <article data-astro-cid-bvzihdzo>  <div id="snackbar" data-astro-cid-bvzihdzo>Text copied to clipboard</div> <div class="prose" data-astro-cid-bvzihdzo> <div class="title" data-astro-cid-bvzihdzo> <h1 data-astro-cid-bvzihdzo>A Cheatsheet for Glaze Window Manager</h1> <div class="date" data-astro-cid-bvzihdzo> <time datetime="2025-05-05T00:00:00.000Z"> May 5, 2025 </time>  </div> <hr data-astro-cid-bvzihdzo> </div>  <h4 id="glazewm-commands-cheatsheet">GlazeWM Commands Cheatsheet</h4>
+<p><em>All available commands and their default keybindings</em></p>
+<hr>
+<h4 id="-shifting-focus">🧭 Shifting Focus</h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Action</th><th>Command</th><th>Keybinding</th></tr></thead><tbody><tr><td>Focus in direction</td><td><code>focus --direction &#x3C;DIRECTION></code></td><td><code>Alt + h/j/k/l</code></td></tr><tr><td>Cycle focus: tiling → floating → fullscreen</td><td><code>wm-cycle-focus</code></td><td><code>Alt + Space</code></td></tr><tr><td>Focus recent workspace</td><td><code>focus --recent-workspace</code></td><td><code>Alt + '</code></td></tr><tr><td>Focus next workspace</td><td><code>focus --next-workspace</code></td><td><code>Alt + .</code></td></tr><tr><td>Focus previous workspace</td><td><code>focus --prev-workspace</code></td><td><code>Alt + ,</code></td></tr><tr><td>Focus workspace by name</td><td><code>focus --workspace &#x3C;NAME></code></td><td><code>Alt + &#x3C;0-9></code></td></tr></tbody></table>
+<hr>
+<h4 id="-moving-around">🧱 Moving Around</h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Action</th><th>Command</th><th>Keybinding</th></tr></thead><tbody><tr><td>Move window in direction</td><td><code>move --direction &#x3C;DIRECTION></code></td><td><code>Alt + Shift + h/j/k/l</code></td></tr><tr><td>Move window to recent workspace</td><td><code>move --recent-workspace</code></td><td><code>Alt + Shift + '</code></td></tr><tr><td>Move window to next workspace</td><td><code>move --next-workspace</code></td><td><code>Alt + Shift + .</code></td></tr><tr><td>Move window to previous workspace</td><td><code>move --prev-workspace</code></td><td><code>Alt + Shift + ,</code></td></tr><tr><td>Move window to workspace</td><td><code>move --workspace &#x3C;NAME></code></td><td><code>Alt + Shift + &#x3C;0-9></code></td></tr><tr><td>Move workspace in direction</td><td><code>move-workspace --direction &#x3C;DIRECTION></code></td><td><code>Alt + Shift + a/d</code></td></tr></tbody></table>
+<hr>
+<h4 id="-modifying-windows">🪟 Modifying Windows</h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Action</th><th>Command</th><th>Keybinding</th></tr></thead><tbody><tr><td>Resize window</td><td><code>resize --width &#x3C;AMOUNT> --height &#x3C;AMOUNT></code></td><td><code>Alt + u/i/o/p</code></td></tr><tr><td>Set exact window size</td><td><code>size --width &#x3C;AMOUNT> --height &#x3C;AMOUNT></code></td><td></td></tr><tr><td>Close window</td><td><code>close</code></td><td><code>Alt + Shift + q</code></td></tr><tr><td>Ignore window</td><td><code>ignore</code></td><td></td></tr><tr><td>Resize window borders</td><td><code>adjust-borders --left --right ...</code></td><td></td></tr><tr><td>Toggle tiling direction</td><td><code>toggle-tiling-direction</code></td><td></td></tr><tr><td>Toggle floating state</td><td><code>toggle-floating</code></td><td><code>Alt + Shift + Space</code></td></tr><tr><td>Toggle minimized state</td><td><code>toggle-minimized</code></td><td><code>Alt + -</code></td></tr><tr><td>Toggle fullscreen state</td><td><code>toggle-fullscreen</code></td><td><code>Alt + =</code></td></tr><tr><td>Toggle tiling state</td><td><code>toggle-tiling</code></td><td><code>Alt + t</code></td></tr><tr><td>Change to floating state</td><td><code>set-floating</code></td><td></td></tr><tr><td>Change to minimized state</td><td><code>set-minimized</code></td><td></td></tr><tr><td>Change to fullscreen state</td><td><code>set-fullscreen</code></td><td></td></tr><tr><td>Change to tiling state</td><td><code>set-tiling</code></td><td></td></tr></tbody></table>
+<hr>
+<h4 id="️-general">⚙️ General</h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Action</th><th>Command</th><th>Keybinding</th></tr></thead><tbody><tr><td>Gracefully exit WM</td><td><code>wm-exit</code></td><td><code>Alt + Shift + e</code></td></tr><tr><td>Reload config</td><td><code>wm-reload-config</code></td><td><code>Alt + Shift + r</code></td></tr><tr><td>Redraw all windows</td><td><code>wm-redraw</code></td><td><code>Alt + Shift + w</code></td></tr><tr><td>Enable binding mode by name</td><td><code>wm-enable-binding-mode --name &#x3C;NAME></code></td><td></td></tr><tr><td>Disable binding mode by name</td><td><code>wm-disable-binding-mode --name &#x3C;NAME></code></td><td></td></tr><tr><td>Execute a shell command</td><td><code>shell-exec &#x3C;COMMAND...></code></td><td></td></tr></tbody></table>
+<hr>
+<h4 id="-keybindings-overview">🎹 Keybindings Overview</h4>
+<h5 id="with-alt-pressed">With <code>Alt</code> pressed:</h5>
+<ul>
+<li><code>h/j/k/l</code>: Focus window left/down/up/right</li>
+<li><code>u/i/o/p</code>: Resize window</li>
+<li><code>Space</code>: Cycle focus</li>
+<li><code>'/.</code>, <code>,</code>: Focus workspaces</li>
+<li><code>0–9</code>: Focus workspace by name</li>
+<li><code>t</code>: Toggle tiling</li>
+<li><code>-</code>: Toggle minimized</li>
+<li><code>=</code>: Toggle fullscreen</li>
+</ul>
+<h5 id="with-alt--shift-pressed">With <code>Alt + Shift</code> pressed:</h5>
+<ul>
+<li><code>h/j/k/l</code>: Move window</li>
+<li><code>'/.</code>, <code>,</code>: Move window to workspace</li>
+<li><code>0–9</code>: Move window to workspace by name</li>
+<li><code>a/d</code>: Move workspace left/right</li>
+<li><code>Space</code>: Toggle floating</li>
+<li><code>q</code>: Close window</li>
+<li><code>e</code>: Exit WM</li>
+<li><code>r</code>: Reload config</li>
+<li><code>w</code>: Redraw windows</li>
+</ul>
+<hr>
+<p><strong>Legend</strong>:</p>
+<ul>
+<li><code>&#x3C;DIRECTION></code> = <code>left</code>, <code>right</code>, <code>up</code>, <code>down</code></li>
+<li><code>&#x3C;NAME></code> = Workspace name or number</li>
+<li><code>&#x3C;AMOUNT></code> = Pixel value or percentage</li>
+</ul>  </div> </article> </main> <style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).load=e;window.dispatchEvent(new Event("astro:load"));})();;(()=>{var A=Object.defineProperty;var g=(i,o,a)=>o in i?A(i,o,{enumerable:!0,configurable:!0,writable:!0,value:a}):i[o]=a;var d=(i,o,a)=>g(i,typeof o!="symbol"?o+"":o,a);{let i={0:t=>m(t),1:t=>a(t),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(a(t)),5:t=>new Set(a(t)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(t),9:t=>new Uint16Array(t),10:t=>new Uint32Array(t),11:t=>1/0*t},o=t=>{let[l,e]=t;return l in i?i[l](e):void 0},a=t=>t.map(o),m=t=>typeof t!="object"||t===null?t:Object.fromEntries(Object.entries(t).map(([l,e])=>[l,o(e)]));class y extends HTMLElement{constructor(){super(...arguments);d(this,"Component");d(this,"hydrator");d(this,"hydrate",async()=>{var b;if(!this.hydrator||!this.isConnected)return;let e=(b=this.parentElement)==null?void 0:b.closest("astro-island[ssr]");if(e){e.addEventListener("astro:hydrate",this.hydrate,{once:!0});return}let c=this.querySelectorAll("astro-slot"),n={},h=this.querySelectorAll("template[data-astro-template]");for(let r of h){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(n[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(let r of c){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(n[r.getAttribute("name")||"default"]=r.innerHTML)}let p;try{p=this.hasAttribute("props")?m(JSON.parse(this.getAttribute("props"))):{}}catch(r){let s=this.getAttribute("component-url")||"<unknown>",v=this.getAttribute("component-export");throw v&&(s+=` (export ${v})`),console.error(`[hydrate] Error parsing props for component ${s}`,this.getAttribute("props"),r),r}let u;await this.hydrator(this)(this.Component,p,n,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),this.dispatchEvent(new CustomEvent("astro:hydrate"))});d(this,"unmount",()=>{this.isConnected||this.dispatchEvent(new CustomEvent("astro:unmount"))})}disconnectedCallback(){document.removeEventListener("astro:after-swap",this.unmount),document.addEventListener("astro:after-swap",this.unmount,{once:!0})}connectedCallback(){if(!this.hasAttribute("await-children")||document.readyState==="interactive"||document.readyState==="complete")this.childrenConnectedCallback();else{let e=()=>{document.removeEventListener("DOMContentLoaded",e),c.disconnect(),this.childrenConnectedCallback()},c=new MutationObserver(()=>{var n;((n=this.lastChild)==null?void 0:n.nodeType)===Node.COMMENT_NODE&&this.lastChild.nodeValue==="astro:end"&&(this.lastChild.remove(),e())});c.observe(this,{childList:!0}),document.addEventListener("DOMContentLoaded",e)}}async childrenConnectedCallback(){let e=this.getAttribute("before-hydration-url");e&&await import(e),this.start()}async start(){let e=JSON.parse(this.getAttribute("opts")),c=this.getAttribute("client");if(Astro[c]===void 0){window.addEventListener(`astro:${c}`,()=>this.start(),{once:!0});return}try{await Astro[c](async()=>{let n=this.getAttribute("renderer-url"),[h,{default:p}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),u=this.getAttribute("component-export")||"default";if(!u.includes("."))this.Component=h[u];else{this.Component=h;for(let f of u.split("."))this.Component=this.Component[f]}return this.hydrator=p,this.hydrate},e,this)}catch(n){console.error(`[astro-island] Error hydrating ${this.getAttribute("component-url")}`,n)}}attributeChangedCallback(){this.hydrate()}}d(y,"observedAttributes",["props"]),customElements.get("astro-island")||customElements.define("astro-island",y)}})();</script><astro-island uid="Z16zqT" prefix="r0" component-url="/_astro/ClipboardCopy.Becc9I6d.js" component-export="default" renderer-url="/_astro/client.DyS41jpO.js" props="{&quot;data-astro-cid-bvzihdzo&quot;:[0,true]}" ssr client="load" opts="{&quot;name&quot;:&quot;ClipboardCopy&quot;,&quot;value&quot;:true}" await-children><div id="snackbar">Text copied to clipboard</div><!--astro:end--></astro-island> <footer data-astro-cid-sz7xmlte>
+&copy; 2025 Miyarima. All rights reserved.
+<div class="links" data-astro-cid-sz7xmlte> <a href="/terms-of-service" data-astro-cid-sz7xmlte>Terms of Service</a> <a href="/privacy-policy" data-astro-cid-sz7xmlte>Privacy Policy</a> </div> </footer>  </body></html>
