@@ -1,7 +1,8 @@
 # Define source paths
 $dotfilesSrc = "C:\Users\D2i - Desmond\.dotfiles\*"
 $glzrSrc = "C:\Users\D2i - Desmond\.glzr\*"
-$profileSrc = $PROFILE
+$profileSrc = "C:\Users\D2i - Desmond\OneDrive - Data2improve\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1"
+
 
 # Define repo backup path
 $repoPath = "C:\Users\D2i - Desmond\OneDrive - Data2improve\Desktop\scripts\.dotfiles"
@@ -12,16 +13,24 @@ Copy-Item -Path $dotfilesSrc -Destination $repoPath -Recurse -Force
 
 # Copy .glzr folder content
 Write-Output "Copying .glzr..."
-Copy-Item -Path $glzrSrc -Destination (Join-Path $repoPath ".glzr") -Recurse -Force
+$glzrDest = Join-Path $repoPath ".glzr"
+if (-Not (Test-Path $glzrDest)) {
+    New-Item -ItemType Directory -Path $glzrDest | Out-Null
+}
+Copy-Item -Path $glzrSrc -Destination $glzrDest -Recurse -Force
 
 # Copy PowerShell profile
 Write-Output "Copying PowerShell profile..."
-Copy-Item -Path $profileSrc -Destination (Join-Path $repoPath "Microsoft.PowerShell_profile.ps1") -Force
+if (Test-Path $profileSrc) {
+    Copy-Item -Path $profileSrc -Destination (Join-Path $repoPath "Microsoft.PowerShell_profile.ps1") -Force
+} else {
+    Write-Output "Profile file not found at $profileSrc — skipping copy."
+}
 
 # Change directory to repo
 Set-Location $repoPath
 
-# Git add, commit, push
+# Git add, commit, push 
 Write-Output "Adding changes to git..."
 git add .
 
