@@ -5,25 +5,13 @@ if (-not (Get-Command choco -ErrorAction SilentlyContinue)) {
     iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 }
 
-# Install packages
-choco install -y glazewm zebar lively oh-my-posh nerd-fonts-fira-code
+# Install packages including AutoHotkey
+choco install -y glazewm zebar lively oh-my-posh nerd-fonts-fira-code autohotkey
 
 # Setup dotfiles repo (clone or update)
 $dotfilesRepo = "https://github.com/DesmondD2i/.dotfiles"
 $dotfilesPath = "$HOME\.dotfiles"
-if (-not (Test-Path $dotfilesPath)) {
-    git clone $dotfilesRepo $dotfilesPath
-} else {
-    Set-Location $dotfilesPath
-    git pull
-}
 
-$dotfilesPath = "$HOME\.dotfiles"
-$userHome = "$HOME"
-$profileDestination = "$HOME\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1"
-$fontsSource = Join-Path $dotfilesPath "fonts\0xproto"
-
-# Clone or update repo
 if (-not (Test-Path $dotfilesPath)) {
     Write-Output "Cloning dotfiles repo..."
     git clone $dotfilesRepo $dotfilesPath
@@ -32,6 +20,10 @@ if (-not (Test-Path $dotfilesPath)) {
     Set-Location $dotfilesPath
     git pull
 }
+
+$userHome = "$HOME"
+$profileDestination = "$HOME\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1"
+$fontsSource = Join-Path $dotfilesPath "fonts\0xproto"
 
 # Copy .dotfiles content to user home (merge, overwrite)
 Write-Output "Copying .dotfiles content to user folder..."
@@ -66,6 +58,26 @@ if (Test-Path $fontsSource) {
     }
 } else {
     Write-Output "Fonts folder not found: $fontsSource"
+}
+
+# Create scheduled task to run start-desktop-tools.ps1 at logon
+$taskName = "StartDesktopTools"
+$scriptPath = "$dotfilesPath\scripts\start-desktop-tools.ps1"
+$action = New-ScheduledTaskAction -Execute "powershell.exe" -Argument "-ExecutionPolicy Bypass -WindowStyle Hidden -File `"$scriptPath`""
+$trigger = New-ScheduledTaskTrigger -AtLogOn -Delay "00:00:10"
+$principal = New-ScheduledTaskPrincipal -UserId "$env:USERNAME" -RunLevel Highest
+$settings = New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries
+
+try {
+    # Remove existing task if present
+    if (Get-ScheduledTask -TaskName $taskName -ErrorAction SilentlyContinue) {
+        Unregister-ScheduledTask -TaskName $taskName -Confirm:$false
+    }
+
+    Register-ScheduledTask -TaskName $taskName -Action $action -Trigger $trigger -Principal $principal -Settings $settings
+    Write-Output "Scheduled task '$taskName' created successfully."
+} catch {
+    Write-Output "Failed to create scheduled task: $_"
 }
 
 Write-Output "Bootstrap complete. Restart your terminal."
