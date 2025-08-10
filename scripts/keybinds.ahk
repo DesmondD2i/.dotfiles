@@ -24,6 +24,6 @@
 #Enter::
 {
     DesktopPath := A_Desktop
-    Run("powershell.exe -NoExit -Command Set-Location -Path '" DesktopPath "'")
+    Run('wt.exe -p "PowerShell" -d "' DesktopPath '"')
     Return
 }
