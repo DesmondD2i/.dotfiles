@@ -27,3 +27,21 @@
     Run('wt.exe -p "PowerShell" -d "' DesktopPath '"')
     Return
 }
+
+^!k:: {
+    appUrl := "https://keepersecurity.eu/vault/"
+    chromePath := "C:\Program Files\Google\Chrome\Application\chrome.exe"
+    fuzzyTitle := "vault - desmond"
+
+    if WinExist("ahk_exe chrome.exe ahk_class Chrome_WidgetWin_1")
+    {
+        title := WinGetTitle("A")
+        if InStr(title, fuzzyTitle)
+        {
+            WinActivate()
+            return
+        }
+    }
+
+    Run(Format('"{1}" --app="{2}"', chromePath, appUrl))
+}
