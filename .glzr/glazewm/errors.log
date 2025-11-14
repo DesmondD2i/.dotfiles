@@ -113,3 +113,34 @@ Error: The operation was canceled by the user. (0x800704C7)
 [2m2025-08-09T16:41:53.068537Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Command doesn't have an ending `"`: '"c:\Program Files\WindowsApps\CanonicalGroupLimited.Ubuntu_2404.1.68.0_x64__79rhkp1fndgsc\ubuntu.exe"'.
 [2m2025-08-09T17:42:46.498312Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Another instance of the application is already running.
 [2m2025-08-09T18:49:18.788372Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m window_effects.focused_window.border: Color must start with a `#`. at line 62 column 7
+[2m2025-08-11T07:08:23.415576Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Failed to create single instance mutex.
+
+Caused by:
+    Access is denied. (0x80070005)
+[2m2025-08-12T06:11:33.475245Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Workspace with name '4' doesn't exist or is already active.
+[2m2025-08-12T06:12:41.479860Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Workspace with name '4' doesn't exist or is already active.
+[2m2025-09-08T10:27:05.127504Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Failed to send response: channel closed
+[2m2025-09-10T09:01:32.997215Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Failed to send response: channel closed
+[2m2025-09-10T09:01:34.017785Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Failed to send response: channel closed
+[2m2025-09-10T09:01:34.614891Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Failed to send response: channel closed
+[2m2025-09-10T09:01:34.758736Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Failed to send response: channel closed
+[2m2025-09-10T09:01:36.536444Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Failed to send response: channel closed
+[2m2025-09-10T09:01:36.537825Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Failed to send response: channel closed
+[2m2025-09-10T09:01:36.539245Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Failed to send response: channel closed
+[2m2025-09-12T14:41:57.422986Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Failed to send response: channel closed
+[2m2025-09-12T14:41:57.500575Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Failed to send response: channel closed
+[2m2025-09-12T14:41:57.605554Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Failed to send response: channel closed
+[2m2025-09-12T14:41:57.606868Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Failed to send response: channel closed
+[2m2025-09-12T14:41:57.607322Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Failed to send response: channel closed
+[2m2025-09-12T14:41:57.635963Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Failed to send response: channel closed
+[2m2025-09-12T14:41:57.699984Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Failed to send response: channel closed
+[2m2025-09-12T14:41:57.701281Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Failed to send response: channel closed
+[2m2025-09-12T14:41:57.702056Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Failed to send response: channel closed
+[2m2025-09-12T14:41:57.984469Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Failed to send response: channel closed
+[2m2025-09-12T14:41:57.985507Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Failed to send response: channel closed
+[2m2025-09-12T14:41:57.992961Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Failed to send response: channel closed
+[2m2025-09-12T14:41:57.993983Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Failed to send response: channel closed
+[2m2025-09-12T14:41:57.995536Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Failed to send response: channel closed
+[2m2025-10-29T14:33:40.136562Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m did not find expected key at line 257 column 30, while parsing a block mapping at line 256 column 5
+[2m2025-10-29T14:35:35.660776Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m did not find expected key at line 257 column 30, while parsing a block mapping at line 256 column 5
+[2m2025-10-29T14:36:17.550840Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m did not find expected key at line 257 column 30, while parsing a block mapping at line 256 column 5
