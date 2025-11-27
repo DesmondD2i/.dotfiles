@@ -144,3 +144,4 @@ Caused by:
 [2m2025-10-29T14:33:40.136562Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m did not find expected key at line 257 column 30, while parsing a block mapping at line 256 column 5
 [2m2025-10-29T14:35:35.660776Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m did not find expected key at line 257 column 30, while parsing a block mapping at line 256 column 5
 [2m2025-10-29T14:36:17.550840Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m did not find expected key at line 257 column 30, while parsing a block mapping at line 256 column 5
+[2m2025-11-27T15:30:46.541815Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Another instance of the application is already running.

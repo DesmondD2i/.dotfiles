@@ -59,3 +59,42 @@
         Run exe . " " . script
     }
 }
+
+; -------- GLAZE, ZEBAR & LIVELY CONFIG --------
+GlazeExePath := "C:\Program Files\glzr.io\GlazeWM\glazewm.exe"
+GlazeProcName := "glazewm.exe"
+
+ZebarExePath := "C:\Program Files\glzr.io\Zebar\zebar.exe"
+ZebarProcName := "zebar.exe"
+
+LivelyExePath := "C:\Users\D2i - Desmond\OneDrive - Data2improve\Desktop\Lively Wallpaper - Shortcut.lnk"
+LivelyProcName := "Lively.exe"
+
+KillIfRunning(procName) {
+    if ProcessExist(procName) {
+        try ProcessClose(procName)
+    }
+}
+
+StartIfNotRunning(exePath, procName) {
+    if !ProcessExist(procName) {
+        try Run(exePath)
+    }
+}
+
+; -------- FULL RESTART HOTKEY --------
+; Win + Ctrl + R
+#^r::
+{
+    ; Kill
+    KillIfRunning(GlazeProcName)
+    KillIfRunning(ZebarProcName)
+    KillIfRunning(LivelyProcName)
+
+    Sleep 500  ; small delay
+
+    ; Start
+    StartIfNotRunning(GlazeExePath, GlazeProcName)
+    StartIfNotRunning(ZebarExePath, ZebarProcName)
+    StartIfNotRunning(LivelyExePath, LivelyProcName)
+}
